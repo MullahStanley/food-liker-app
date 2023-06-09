@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 
 const FoodForm = () => {
   const [name, setName] = useState('');
@@ -15,7 +14,7 @@ const FoodForm = () => {
       description: description
     };
 
-    axios.post('/foods', foodData)
+    fetch('/foods', foodData)
       .then(response => {
         console.log('Food created:', response.data);
         // Optionally, you can redirect to the home page or perform any other actions after successful creation

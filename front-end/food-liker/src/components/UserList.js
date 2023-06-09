@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 
 const FoodCard = ({ food }) => {
   const [likes, setLikes] = useState(food.likes);
 
   const handleLike = () => {
-    axios.post('/likes', { food_id: food.id })
+    fetch('/likes', { food_id: food.id })
       .then(response => {
         setLikes(likes + 1);
       })
@@ -30,7 +29,7 @@ const UserList = () => {
   const [foods, setFoods] = useState([]);
 
   useEffect(() => {
-    axios.get('/foods')
+    fetch('/foods')
       .then(response => {
         setFoods(response.data);
       })
