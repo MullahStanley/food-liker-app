@@ -1,0 +1,23 @@
+require 'sinatra/activerecord'
+
+namespace :db do
+  desc 'Migrate the database'
+  task :migrate do
+    ActiveRecord::Base.establish_connection(
+      adapter: 'sqlite3',
+      database: 'db/development.sqlite3'
+    )
+    ActiveRecord::Migration.verbose = true
+    ActiveRecord::Migrator.migrate('db/migrate')
+  end
+
+  desc 'Rollback the last migration'
+  task :rollback do
+    ActiveRecord::Base.establish_connection(
+      adapter: 'sqlite3',
+      database: 'db/development.sqlite3'
+    )
+    ActiveRecord::Migration.verbose = true
+    ActiveRecord::Migrator.rollback('db/migrate')
+  end
+end
