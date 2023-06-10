@@ -1,0 +1,17 @@
+current directory: /home/mullz/Desktop/phase-3/food-liker-app/back-end/vendor/bundle/ruby/3.0.0/gems/thin-1.8.2/ext/thin_parser
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20230610-65273-mjcnc9.rb extconf.rb
+checking for main() in -lc... yes
+creating Makefile
+
+current directory: /home/mullz/Desktop/phase-3/food-liker-app/back-end/vendor/bundle/ruby/3.0.0/gems/thin-1.8.2/ext/thin_parser
+make DESTDIR\= clean
+
+current directory: /home/mullz/Desktop/phase-3/food-liker-app/back-end/vendor/bundle/ruby/3.0.0/gems/thin-1.8.2/ext/thin_parser
+make DESTDIR\=
+compiling parser.c
+compiling thin.c
+linking shared-object thin_parser.so
+
+current directory: /home/mullz/Desktop/phase-3/food-liker-app/back-end/vendor/bundle/ruby/3.0.0/gems/thin-1.8.2/ext/thin_parser
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 thin_parser.so ./.gem.20230610-65273-to6h29
