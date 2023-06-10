@@ -43,13 +43,13 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  activerecord
-  puma
-  rake
-  require_all
-  sinatra
-  sinatra-activerecord
-  sqlite3
+  activerecord (~> 7.0)
+  puma (~> 6.2, >= 6.2.2)
+  rake (~> 13.0)
+  require_all (~> 3.0)
+  sinatra (~> 3.0)
+  sinatra-activerecord (~> 2.0)
+  sqlite3 (~> 1.6)
 
 BUNDLED WITH
    2.3.5
