@@ -21,6 +21,10 @@ GEM
     puma (6.3.0)
       nio4r (~> 2.0)
     rack (2.2.7)
+    rack-contrib (2.3.0)
+      rack (~> 2.0)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-protection (3.0.6)
       rack
     rake (13.0.6)
@@ -45,6 +49,8 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 7.0)
   puma (~> 6.2, >= 6.2.2)
+  rack-contrib (~> 2.3)
+  rack-cors (~> 1.1)
   rake (~> 13.0)
   require_all (~> 3.0)
   sinatra (~> 3.0)
