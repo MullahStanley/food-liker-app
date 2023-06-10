@@ -14,11 +14,8 @@ const FoodForm = () => {
       description: description
     };
 
-    fetch('/foods', foodData)
-      .then(response => {
-        console.log('Food created:', response.data);
-        // Optionally, you can redirect to the home page or perform any other actions after successful creation
-      })
+    ('http://127.0.0.1:9292/foods', foodData)
+      .then(response => response.data)
       .catch(error => {
         console.error('Error:', error);
       });

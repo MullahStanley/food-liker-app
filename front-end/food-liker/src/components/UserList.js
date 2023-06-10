@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 
 const FoodCard = ({ food }) => {
   const [likes, setLikes] = useState(food.likes);
 
   const handleLike = () => {
-    fetch('/likes', { food_id: food.id })
+    fetch('http://127.0.0.1:9292/likes', { food_id: food.id })
       .then(response => {
         setLikes(likes + 1);
       })
@@ -29,7 +29,7 @@ const UserList = () => {
   const [foods, setFoods] = useState([]);
 
   useEffect(() => {
-    fetch('/foods')
+    fetch('http://127.0.0.1:9292/foods')
       .then(response => {
         setFoods(response.data);
       })
